@@ -1,4 +1,4 @@
-@{
+﻿@{
     ViewBag.Title = "Pricing Plans";
 }
 
@@ -9,19 +9,27 @@
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Standard</h2>
+        <h2>Standard - $4.99 / Month</h2>
         <p>
             Standard plan blah blah blah blah
         </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <form action="/Pricing/Charge" method="POST">
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="@ViewBag.StripePublicKey"
+                    data-amount="499"
+                    data-name="Demo Site"
+                    data-description="2 widgets"
+                    data-locale="auto">
+            </script>
+        </form>
     </div>
     <div class="col-md-4">
-        <h2>Premium</h2>
+        <h2>Premium - $19.99 / Month</h2>
         <p>Yada yada yadafalejtlakwetjalkejj lkasjdj taletskj alwetj aewtlkjt  t ket ttlkajwe t </p>
         <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Professional</h2>
+        <h2>Professional - $49.99 / Month</h2>
         <p>Blahb blah blah blah blah blah blah blah a.kset flkjflroeuk ipslmj te</p>
         <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>

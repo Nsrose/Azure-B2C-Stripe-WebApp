@@ -10,19 +10,23 @@ namespace WebApp_OpenIDConnect_DotNet_B2C.Controllers
 {
     public class PricingController : Controller
     {
+        [PolicyAuthorize(Policy = "b2c_1_sign-in-policy")]
         public ActionResult Index()
         {
+            //ViewBag.StripePublicKey = Startup.StripePublicKey;
+            ViewBag.StripePublicKey = Startup.StripePublicKey;
             return View();
         }
 
-        // You can use the PolicyAuthorize decorator to execute a certain policy if the user is not already signed into the app.
-        [PolicyAuthorize(Policy = "b2c_1_sign_in_v2")]
-        public ActionResult Claims()
+        [PolicyAuthorize(Policy = "b2c_1_sign-in-policy")]
+        public ActionResult Charge()
         {
-            Claim displayName = ClaimsPrincipal.Current.FindFirst(ClaimsPrincipal.Current.Identities.First().NameClaimType);
-            ViewBag.DisplayName = displayName != null ? displayName.Value : string.Empty;
+            //ViewBag.StripePublicKey = Startup.StripePublicKey;
+            ViewBag.StripePublicKey = Startup.StripePublicKey;
             return View();
         }
+
+
 
         public ActionResult Error(string message)
         {
