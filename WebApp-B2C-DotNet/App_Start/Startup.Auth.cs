@@ -17,7 +17,6 @@ using System.IdentityModel.Tokens;
 using WebApp_OpenIDConnect_DotNet_B2C.Policies;
 using System.Threading;
 using System.Globalization;
-using System.Net.Http;
 
 // Stripe
 using Stripe;
@@ -45,6 +44,11 @@ namespace WebApp_OpenIDConnect_DotNet_B2C
         // Stripe keys
         public static string StripeSecretKey = ConfigurationManager.AppSettings["StripeSecretKey"];
         public static string StripePublicKey = ConfigurationManager.AppSettings["StripePublicKey"];
+
+        public void ConfigureStripe()
+        {
+            StripeConfiguration.SetApiKey(StripeSecretKey);
+        }
 
         public void ConfigureAuth(IAppBuilder app)
         {

@@ -15,7 +15,7 @@ namespace WebApp_OpenIDConnect_DotNet_B2C.Controllers
         {
             //ViewBag.StripePublicKey = Startup.StripePublicKey;
             ViewBag.StripePublicKey = Startup.StripePublicKey;
-            Claim StripeCustomerID = ClaimsPrincipal.Current.FindFirst("stripe_customer_id");
+            Claim StripeCustomerID = ClaimsPrincipal.Current.FindFirst("extension_9447bec1394f4faa9b8fb17bcb35c028_stripe_customer_id");
             ViewBag.StripeCustomerID = StripeCustomerID.Value;
             return View();
         }

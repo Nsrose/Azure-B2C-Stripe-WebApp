@@ -11,26 +11,46 @@
     <div class="col-md-4">
         <h2>Standard - $4.99 / Month</h2>
         <p>
-            Standard plan blah blah blah blah
+            The most basic plan - basic set of features for a super low cost. We're going to snag you with this, and then you'll like it so much you'll have to buy more.
         </p>
         <form action="/Pricing/Charge" method="POST">
             <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                     data-key="@ViewBag.StripePublicKey"
                     data-amount="499"
-                    data-name="Demo Site"
-                    data-description="2 widgets"
+                    data-name="B2C Site"
+                    data-description="Standard Plan Subscription"
                     data-locale="auto">
             </script>
         </form>
     </div>
     <div class="col-md-4">
         <h2>Premium - $19.99 / Month</h2>
-        <p>Yada yada yadafalejtlakwetjalkejj lkasjdj taletskj alwetj aewtlkjt  t ket ttlkajwe t </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <p>
+            Intermediate plan - more advanced set of features for a medium cost. Now that we have your money, we'll give some more stuff -- but not everything yet!
+        </p>
+        <form action="/Pricing/Charge" method="POST">
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="@ViewBag.StripePublicKey"
+                    data-amount="1999"
+                    data-name="B2C Site"
+                    data-description="Premium Plan Subscription"
+                    data-locale="auto">
+            </script>
+        </form>
     </div>
     <div class="col-md-4">
-        <h2>Professional - $49.99 / Month</h2>
-        <p>Blahb blah blah blah blah blah blah blah a.kset flkjflroeuk ipslmj te</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <h2>Pro - $49.99 / Month</h2>
+        <p>
+            Professional plan - the most insane collection of features you'll ever see. This includes free massages, spa access, flying car permit, and other amenities.
+        </p>
+        <form action="/Pricing/Charge" method="POST">
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="@ViewBag.StripePublicKey"
+                    data-amount="1999"
+                    data-name="B2C Site"
+                    data-description="Professional Plan Subscription"
+                    data-locale="auto">
+            </script>
+        </form>
     </div>
 </div>

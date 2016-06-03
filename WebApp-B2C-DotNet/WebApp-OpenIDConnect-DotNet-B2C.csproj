@@ -72,6 +72,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.Owin.Security.OpenIdConnect.3.0.1\lib\net45\Microsoft.Owin.Security.OpenIdConnect.dll</HintPath>
     </Reference>
+    <Reference Include="ModernHttpClient, Version=2.4.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\modernhttpclient.2.4.2\lib\Portable-Net45+WinRT45+WP8+WPA81\ModernHttpClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.9.0.1-beta1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -83,8 +87,8 @@
       <HintPath>..\packages\RestSharp.105.0.1\lib\net4\RestSharp.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Stripe, Version=1.12.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Stripe.1.12.0\lib\net40\Stripe.dll</HintPath>
+    <Reference Include="Stripe.net, Version=6.3.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stripe.net.6.3.3\lib\net45\Stripe.net.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -224,6 +228,7 @@
     <Content Include="Scripts\jquery-2.1.4.min.map" />
     <Content Include="Views\Pricing\Index.cshtml" />
     <Content Include="Views\Premium\Index.cshtml" />
+    <Content Include="Views\Pricing\Charge.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
