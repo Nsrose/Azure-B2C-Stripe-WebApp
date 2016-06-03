@@ -12,6 +12,7 @@ namespace WebApp_OpenIDConnect_DotNet_B2C
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
+            ConfigureStripe();
         }
     }
 }
