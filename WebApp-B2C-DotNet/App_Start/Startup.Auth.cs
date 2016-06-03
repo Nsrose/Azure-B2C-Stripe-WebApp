@@ -38,6 +38,10 @@ namespace WebApp_OpenIDConnect_DotNet_B2C
         public static string SignInPolicyId = ConfigurationManager.AppSettings["ida:SignInPolicyId"];
         public static string ProfilePolicyId = ConfigurationManager.AppSettings["ida:UserProfilePolicyId"];
 
+        // Stripe keys
+        public static string StripeSecretKey = ConfigurationManager.AppSettings["StripeSecretKey"];
+        public static string StripePublicKey = ConfigurationManager.AppSettings["StripePublicKey"];
+
         public void ConfigureAuth(IAppBuilder app)
         {
             app.SetDefaultSignInAsAuthenticationType(CookieAuthenticationDefaults.AuthenticationType);

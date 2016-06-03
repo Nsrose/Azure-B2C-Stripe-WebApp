@@ -22,6 +22,7 @@
     <IISExpressUseClassicPipelineMode />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -150,6 +151,7 @@
     <Folder Include="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\PricingController.cs" />
     <Compile Include="PolicyAuthHelpers\PolicyAuthorize.cs" />
     <Compile Include="PolicyAuthHelpers\PolicyConfigurationManager.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -211,6 +213,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
+    <Content Include="Views\Pricing\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
